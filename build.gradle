@@ -1,0 +1,27 @@
+allprojects  {
+  apply plugin: 'maven'
+
+  group = 'org.eclipse.paho'
+version = '1.2.0'
+}
+
+subprojects {
+  apply plugin: 'java'
+  sourceCompatibility = 1.5
+  targetCompatibility = 1.5
+  tasks.withType(JavaCompile) {
+  	options.encoding = 'UTF-8'
+  }
+
+  
+  repositories {
+    mavenLocal()
+    
+    maven { url "http://download.eclipse.org/releases/kepler" }
+    maven { url "http://repo.maven.apache.org/maven2" }
+  }
+
+  
+  
+  
+}

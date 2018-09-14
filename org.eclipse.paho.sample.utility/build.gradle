@@ -1,0 +1,5 @@
+
+description = ''
+dependencies {
+  compile project(':org.eclipse.paho.client.mqttv3')
+}
