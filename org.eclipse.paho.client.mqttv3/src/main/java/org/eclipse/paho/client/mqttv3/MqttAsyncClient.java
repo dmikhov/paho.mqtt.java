@@ -565,7 +565,7 @@ public class MqttAsyncClient implements IMqttAsyncClient {
 					String shortAddress = address.substring(uri.getScheme().length() + 3);
 					hostField.set(uri, getHostName(shortAddress));
 					
-				} catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+				} catch (Exception e) {
 					throw ExceptionHelper.createMqttException(e.getCause());
 				} 
 				
